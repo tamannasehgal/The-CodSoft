@@ -1,0 +1,374 @@
+<html file>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Niconne&family=Rancho&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barrio&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section class="section1">
+         <div class="navbar">
+            <h2>The Burger's Cafe</h2>
+            <ul>
+                <a href="#"><li>Home </li></a>
+                <a href="#about"><li> About</li></a>
+                <a href="#contact"><li>Contact </li></a>
+            </ul>
+        </div>
+        
+
+        <div class="heading">
+            <h2> Don’t   Compromise Your Cravings </h2>
+            <p> Treat Yourself.</p>
+            <button class="btn"> Order Now</button>
+        </div>
+    </section>
+
+    <section class="section2" id="about">
+        <div class="description">
+            <h2> The Burger's Cafe</h2>
+            <p>
+                Welcome to "The Burger's Shop", where we redefine burger perfection. Our burgers are crafted with precision, using premium,
+                 locally sourced ingredients for a burst of freshness.  Embrace customization and build your own masterpiece with our high-quality toppings and house-made sauces.
+                  Our vibrant ambiance sets the stage for a memorable dining experience – whether you're with friends, family, or savoring a solo adventure.
+                   At "The Burger's Shop", we're not just serving burgers; we're delivering an unparalleled culinary journey. 
+                   Join us and discover a world where every bite is a celebration of flavor and quality. Welcome to the home of extraordinary burgers</p>
+        </div>
+
+        
+        <div class="burgers">
+            <div class="box" id="box1"></div>
+            <div class="box" id="box2"></div>
+            <div class="box" id="box3"></div>
+            <div class="box" id="box4"></div>
+        
+        </div>
+        
+    </section>
+
+
+   
+    
+</body>
+</html>
+<css file>
+/* //.rancho-regular {
+    font-family: "Rancho", cursive;
+    font-weight: 400;
+    font-style: normal;
+  } */
+  /* .niconne-regular {
+    font-family: "Niconne", cursive;
+    font-weight: 400;
+    font-style: normal;
+  } */
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
+  html{
+    scroll-behavior: auto;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+:root{
+    --text: 1.5rem;
+  }
+.section1{
+        min-height: 100vh;
+        background: linear-gradient(black,transparent) ,url(burger.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        animation: section 1s ease-in-out;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0rem 1.5rem;
+    animation: navbar 2s ease-in-out;
+  }
+.navbar h2{
+    color: #16aab5;
+    font-size: 2.5rem;
+    font-family: "Niconne", cursive;
+    font-weight: 400;
+    font-style: normal;
+ }
+  .navbar ul{
+    list-style: none;
+ }
+.navbar ul li{
+    display: inline-block;
+    margin-left: 3rem;
+    font-size: var(--text);
+    color: white;
+    border-bottom: 2px solid transparent
+  }
+.navbar ul li a{
+    text-decoration: none;
+}
+.navbar ul li:hover{
+     color: red;
+     text-transform: bold;
+ 
+  }
+.heading{
+    color: white;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: slide 3s ease-in-out;
+  }
+.heading h2{
+    font-size: calc(1rem + 5vw);
+    font-family: "Rancho", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+.heading p{
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    font-family: "Rancho", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+.btn{
+font-family: Roboto, sans-serif;
+font-weight: 800;
+font-size: 14px;
+color: #fff;
+background-color: hsl(0, 100%, 50%);
+padding: 10px 30px;
+border: none;
+box-shadow: rgb(0, 0, 0) 1px 5px 25px 5px;
+border-radius: 50px;
+transition : 1000ms;
+transform: translateY(0);
+display: flex;
+flex-direction: row;
+align-items: center;
+cursor: pointer;
+}
+.btn:hover{
+transition : 1000ms;
+padding: 10px 50px;
+transform : translateY(-1px);
+background-color: #fff;
+color: red;
+border: solid 2px #ffffff;
+}
+
+            /* ------------------------ Animations -------------------------- */
+@keyframes slide{
+  from{
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateX(0%);
+  }
+}
+
+@keyframes navbar{
+  from{
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateX(0%);
+  }
+}
+@keyframes section{
+  from{
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateX(0%);
+  }
+}
+
+.section2{
+  min-height: 100vh;
+        background: linear-gradient(black,transparent) ,url(burger2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        scroll-behavior: smooth;
+        
+        
+}
+
+.description{
+  color: white;
+  height: 50vh;
+  width: 50vw;
+  
+}
+
+.description h2{
+  font-size: calc(1rem + 4vw);
+  padding: 1rem;
+  font-family: "Barrio", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  animation: heading 1s ease-in-out;
+  color: #18FF53;;
+}
+.description p{
+  font-size: 1rem;
+  padding: 2rem;
+
+    font-family: "Rancho", cursive;
+    font-weight: 400;
+    font-style: normal;
+    animation: para 1.5s ease-in-out;
+
+ 
+  
+}
+
+.options{
+  color: white;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  height: calc(100vh-50vh);
+ }
+ 
+.burgers{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50vw;
+  padding: 2rem;
+  margin: 2rem;
+  animation: boxes 1s ease-in-out;
+}
+
+.burgers .box{
+  
+  height: 10rem;
+  width: 8rem;
+  border-radius: 4px;
+  
+  margin-top: 3rem;
+  
+}
+.burgers .box:hover{
+  
+ transform: scale(1.05);
+ -webkit-box-shadow:0px 0px 11px 10px rgb(193, 96, 96);
+ -moz-box-shadow: 0px 0px 11px 10px rgb(199, 96, 96);
+ box-shadow: 0px 0px 11px 10px rgb(209, 161, 161);
+}
+#box1{
+  background: url(https://t3.ftcdn.net/jpg/06/37/51/56/240_F_637515684_A0m9TwTUmZTp1GKDjmgJXkupYmBPDypJ.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: slide 5s ease-in-out;
+  cursor: pointer;
+}
+#box2{
+  background: url(https://t3.ftcdn.net/jpg/06/28/37/98/240_F_628379821_VJyrDiJocW2X7mxtObQyrJ9q25dMlNyr.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: slide 4s ease-in-out;
+  cursor: pointer;
+}
+#box3{
+  background: url(https://t3.ftcdn.net/jpg/06/28/37/98/240_F_628379858_BpOQHKuk5oe1pGExhUJfaNyxPT9G0S3O.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: slide 3s ease-in-out;
+  cursor: pointer;
+
+
+}
+
+#box4{
+  background: url(https://t4.ftcdn.net/jpg/06/28/37/99/240_F_628379922_71SlIWegXWdFXQ8dkvQC2Zss1hOJuxzM.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: slide 2s ease-in-out;
+  cursor: pointer;
+}
+
+@keyframes box1{
+  from{
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateX(0%);
+  }
+}
+
+@keyframes box2{
+  from{
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateX(0%);
+  }
+}
+@keyframes box3{
+  from{
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateX(0%);
+  }
+}
+@keyframes box4{
+  from{
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateX(0%);
+  }
+}
+
+@keyframes para{
+  from{
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateX(0%);
+  }
+}
+@keyframes heading{
+  from{
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateX(0%);
+  }
+}
+@keyframes boxes{
+  from{
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateX(0%);
+  }
+}
+
+
+  
